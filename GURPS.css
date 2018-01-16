@@ -549,16 +549,16 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-traits .sheet-col0 { width: calc(100% - 100px); }
 .sheet-traits .sheet-col0 input { text-align:left; }
 .sheet-traits .sheet-col1 { width: 30px; }
-.sheet-traits .sheet-col1 input { text-align:left; }
+/*.sheet-traits .sheet-col1 input { text-align:left; }*/
 .sheet-traits .sheet-col2 { width: 30px; }
 .sheet-traits .sheet-col3 { width: 40px; }
 .sheet-traits .sheet-row-stats .sheet-col0 { margin-left: 20px; width: calc(100% - 120px); }
 
 .sheet-disadvantages { width: calc(100% - 0.4em); }
-.sheet-disadvantages .sheet-col0 { width: calc(100% - 120px); }
+.sheet-disadvantages .sheet-col0 { width: calc(100% - 100px); }
 .sheet-disadvantages .sheet-col0 input { text-align:left; }
 .sheet-disadvantages .sheet-col1 { width: 30px; }
-.sheet-disadvantages .sheet-col1 input { text-align:left; }
+/*.sheet-disadvantages .sheet-col1 input { text-align:left; }*/
 .sheet-disadvantages .sheet-col2 { width: 30px; }
 .sheet-disadvantages .sheet-col3 { width: 40px; }
 .sheet-disadvantages .sheet-row-stats .sheet-col0 { margin-left: 20px; width: calc(100% - 120px); }
@@ -567,7 +567,7 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-racial .sheet-col0 { width: calc(100% - 100px); }
 .sheet-racial .sheet-col0 input { text-align:left; }
 .sheet-racial .sheet-col1 { width: 30px; }
-.sheet-racial .sheet-col1 input { text-align:left; }
+/*.sheet-racial .sheet-col1 input { text-align:left; }*/
 .sheet-racial .sheet-col2 { width: 30px; }
 .sheet-racial .sheet-col3 { width: 40px; }
 .sheet-racial .sheet-row-stats .sheet-col0 { margin-left: 20px; width: calc(100% - 120px); }
@@ -604,7 +604,7 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-active-defense { width: calc(100% - 140px - 0.8em); }
 .sheet-active-defense .sheet-col0 { width: calc(100% - 172px); }
 .sheet-active-defense .sheet-col0 input { text-align:left; }
-.sheet-active-defense .sheet-col1 { width: 80px; }
+.sheet-active-defense .sheet-col1 { width: 80px; text-align: center; }
 .sheet-active-defense .sheet-col2 { width: 40px; }
 .sheet-active-defense .sheet-col3 { width: 30px; }
 .sheet-active-defense .sheet-col4 { width: 22px; }
@@ -626,14 +626,14 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-ranged-attacks { width: calc(100% - 140px - 0.8em); }
 .sheet-ranged-attacks .sheet-col0 { width: calc(100% - 404px); }
 .sheet-ranged-attacks .sheet-col0 input { text-align:left; }
-.sheet-ranged-attacks .sheet-col1 { width: 40px; }
+.sheet-ranged-attacks .sheet-col1 { width: 45px; }
 .sheet-ranged-attacks .sheet-col1 input { text-align:left; }
 .sheet-ranged-attacks .sheet-col2 { width: 30px; }
 .sheet-ranged-attacks .sheet-col3 { width: 30px; }
-.sheet-ranged-attacks .sheet-col4 { width: 40px; }
+.sheet-ranged-attacks .sheet-col4 { width: 45px; }
 .sheet-ranged-attacks .sheet-col5 { width: 30px; }
 .sheet-ranged-attacks .sheet-col6 { width: 40px; }
-.sheet-ranged-attacks .sheet-col7 { width: 60px; }
+.sheet-ranged-attacks .sheet-col7 { width: 50px; }
 .sheet-ranged-attacks .sheet-col8 { width: 60px; }
 .sheet-ranged-attacks .sheet-col9 { width: 22px; }
 .sheet-ranged-attacks .sheet-col10 { width: 30px; }
