@@ -504,7 +504,7 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-miscelleneous .sheet-row-size .sheet-col1,
 .sheet-miscelleneous .sheet-row-hand .sheet-col1 { width: calc(100% - 80px); }
 
-.sheet-points { width: 100px; }
+.sheet-points { width: 110px; }
 .sheet-points .sheet-header .sheet-col0 { width: 100%; }
 .sheet-points .sheet-row .sheet-col0 { width: 60px; }
 .sheet-points .sheet-row .sheet-col1 { width: 50px; }
