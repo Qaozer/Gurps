@@ -661,8 +661,8 @@ input.sheet-module-roll:checked ~ .sheet-wrapper .sheet-module-off-roll,
 .sheet-items .sheet-col2 { width: 50px; }
 .sheet-items .sheet-col3 { width: 50px; }
 .sheet-items .sheet-col4 { width: 50px; }
-.sheet-items .sheet-col5 { width: 50px; }
-.sheet-items .sheet-col6 { width: 50px; }
+.sheet-items .sheet-col5 { width: 50px; text-align: center; }
+.sheet-items .sheet-col6 { width: 50px; text-align: center; }
 .sheet-items .sheet-row-stats .sheet-col0 { margin-left: 20px; width: calc(100% - 290px); }
 .sheet-items .sheet-row-totals .sheet-col0 { width: calc(100% - 300px); }
 .sheet-items .sheet-row-totals .sheet-col1 { width: 100px; }
