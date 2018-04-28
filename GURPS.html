@@ -619,7 +619,7 @@
 								<tbody>
 									<tr>
 										<td class="sheet-label">Reeling</td>
-										<td><input type="text" name="attr_hp_reeling" value="Less than [[(@{hit_points|max}) / 3]]" disabled="disabled"></td>
+										<td><input type="number" name="attr_hit_points_reel" value="10" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -641,7 +641,7 @@
 									</tr>
 									<tr>
 										<td class="sheet-label">Verge of Death</td>
-										<td><input value="(@{hit_points|max}) * -1" disabled="disabled"></td>
+										<td><input type="number" name="attr_verge_death" value="-10" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -655,7 +655,7 @@
 									</tr>
 									<tr>
 										<td class="sheet-label">Death</td>
-										<td><input value="(@{hit_points|max}) * -5" disabled="disabled"></td>
+										<td><input type="number" name="attr_death" value="-50" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -664,7 +664,7 @@
 									</tr>
 									<tr>
 										<td class="sheet-label">Total Destruction</td>
-										<td><input value="(@{hit_points|max}) * -10" disabled="disabled"></td>
+										<td><input type="number" name="attr_destruction" value="-100" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -676,7 +676,7 @@
 						</span>
 					</div>
 					<div class="sheet-cell sheet-col1">
-						<input type="number" name="attr_hit_points" />
+						<input type="number" name="attr_hit_points" value="10" />
 					</div>
 				</div> <!-- .sheet-row -->
 				<div class="sheet-row sheet-row-fatigue-points">
@@ -713,7 +713,7 @@
 								<tbody>
 									<tr>
 										<td class="sheet-label">Tired</td>
-										<td><input type="text" name="attr_fp_tired" value="Less than [[(@{fatigue_points|max}) / 3]]" disabled="disabled"></td>
+										<td><input type="number" name="attr_fp_tired" value="3" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -737,7 +737,7 @@
 									</tr>
 									<tr>
 										<td class="sheet-label">Unconscious</td>
-										<td><input value="[[-(@{fatigue_points|max})]]" disabled="disabled"></td>
+										<td><input type="number" name="attr_unconscious" value="-10" readonly></td>
 									</tr>
 									<tr>
 										<td colspan="2">
@@ -753,7 +753,7 @@
 						</span>
 					</div>
 					<div class="sheet-cell sheet-col1">
-						<input type="number" name="attr_fatigue_points" />
+						<input type="number" name="attr_fatigue_points" value="10"/>
 					</div>
 				</div> <!-- .sheet-row -->
 				<div class="sheet-row sheet-row-energy-points">
@@ -2589,7 +2589,11 @@
 				((+v.hit_points_points || 0) / 2 | 0);
 			var mod = +v.hit_points_mod;
 			setAttrs({
-				hit_points_max: base + mod
+				hit_points_max: base + mod,
+				hit_points_reel: Math.floor((base + mod) / 3),
+				verge_death: (-1 * (base + mod)),
+				death: (-5 * (base + mod)),
+				destruction: (-10 * (base + mod))
 			}, {silent: false}, function () {
 				getAttrs(['hit_points'], function(v2) {
 					if (v2.hit_points == null) {
@@ -2615,7 +2619,9 @@
 				((+v.fatigue_points_points || 0) / 3 | 0);
 			var mod = +v.fatigue_points_mod;
 			setAttrs({
-				fatigue_points_max: base + mod
+				fatigue_points_max: base + mod,
+				fp_tired: Math.floor((base + mod) / 3),
+				unconscious: (-1 * (base + mod))
 			}, {silent: false}, function () {
 				getAttrs(['fatigue_points'], function(v2) {
 					if (v2.fatigue_points == null) {
